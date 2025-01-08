@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(229, 224, 224);
+}
+
+.card {
+  width: 650px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 12px;
+  padding: 30px 35px 20px 210px;
+  background-color: #fff;
+}
+
+.card .ilustration {
+  position: absolute;
+  left: -15%;
+}
+
+.card .information .title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card .information .question {
+  width: 390px;
+  padding: 15px 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.card .information .question:last-child {
+  border-bottom: none;
+}
+
+.question .question-title {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.card .information .question-title:active {
+  transform: scale(0.98);
+}
+
+.question .question-title img {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.question .question-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in, max-height 0.4s ease-in, visibility 0.4s ease-in, opacity 0.3s ease-out, max-height 0.2s ease-out, visibility 0.3s ease-out;
+}
+
+.question .question-text.show {
+  opacity: 1;
+  max-height: 1000px;
+}
